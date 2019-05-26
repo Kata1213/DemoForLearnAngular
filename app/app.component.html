@@ -1,10 +1,13 @@
 <div class="cmp-1">
-  <h1>根组件</h1>
-  <p highLightSelector >你好 angular2 ，你好 Kata1213 {{ greeting }}！</p>
+    <h1>根组件</h1>
+    <p highLightSelector>你好 angular2 ，你好 Kata1213 {{ greeting }}！</p>
 
     <label> <input type="checkbox" [(ngModel)]="showToggle"> 内置指令展示:</label>
-  <p highLightSelector *ngIf="showToggle" > 这里的内容根据上面的指令来显示. 这里是 内置指令 的使用示例.</p>
+    <p highLightSelector *ngIf="showToggle"> 这里的内容根据上面的指令来显示. 这里是 内置指令 的使用示例.</p>
 
 
-  <childSelector [messageOfChild]="msgToChild" ></childSelector>
+    <childSelector [messageOfChild]="msgToChild" (outputer)="receive($event)"></childSelector>
+
+    <p>从子组件得到的消息是: {{msgGetFromChild}}</p>
+
 </div>

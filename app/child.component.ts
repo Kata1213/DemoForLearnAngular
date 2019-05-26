@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Input} from "@angular/core";
+import {Input,Output,EventEmitter} from "@angular/core";
 
 @Component({
   selector: 'childSelector',
@@ -10,8 +10,14 @@ export class ChildComponent {
 
   @Input() private messageOfChild: string;
 
+  @Output() private outputer = new EventEmitter<string>();
+
   constructor(){ }
 
   ngOnInit(){ }
+
+  msgSendToParent(){
+    this.outputer.emit("这是要专递给父组件的信息! 爹!")
+  }
 
 }

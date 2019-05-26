@@ -9,6 +9,8 @@ export class AppComponent {
   private greeting: string;
   private showToggle: boolean;
   private msgToChild: string;
+  private msgGetFromChild:string;
+
 
   constructor(private service: LogService) {
   }
@@ -17,6 +19,10 @@ export class AppComponent {
     this.greeting = 'Angular 2';
     this.service.logService(" AppComponent ngOnInit里面的greeting = " + this.greeting)
     this.msgToChild = "儿砸!"
+  }
+
+  receive(msg:string){
+    this.msgGetFromChild =msg;
   }
 
 }
