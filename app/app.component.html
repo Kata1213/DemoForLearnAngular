@@ -5,4 +5,6 @@
     <label> <input type="checkbox" [(ngModel)]="showToggle"> 内置指令展示:</label>
   <p highLightSelector *ngIf="showToggle" > 这里的内容根据上面的指令来显示. 这里是 内置指令 的使用示例.</p>
 
+
+  <childSelector [messageOfChild]="msgToChild" ></childSelector>
 </div>
