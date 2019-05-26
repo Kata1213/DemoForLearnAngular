@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {LogService} from "./log.service";
 
 @Component({
   selector: 'my-app',
@@ -8,10 +9,11 @@ export class AppComponent {
   private greeting: string;
   private showToggle: boolean;
 
-	constructor() {	}
+	constructor(private service:LogService) {	}
 
   ngOnInit() {
     this.greeting = 'Angular 2';
+    this.service.logService(" AppComponent ngOnInit里面的greeting = "+this.greeting)
   }
 
 }
