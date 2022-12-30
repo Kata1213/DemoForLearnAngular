@@ -21,9 +21,9 @@
   },
   "devDependencies": {
     "@types/core-js": "0.9.34",
-    "ts-loader": "1.0.0",
+    "ts-loader": "9.4.2",
     "typescript": "2.0.3",
-    "webpack": "2.3.2",
+    "webpack": "5.75.0",
     "webpack-dev-server": "2.4.2"
   }
 }
